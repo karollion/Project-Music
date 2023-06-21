@@ -6,6 +6,27 @@ $color-second: #BFBFBF;
 $color-main: #CF383E;
 
 
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url("../vendor//SourceSansPro-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SourceSansPro-Black;
+  //font-weight: bold;
+  src: url("../vendor/SourceSansPro-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SourceSansPro-Semibold;
+  src: url("../vendor/SourceSansPro-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SourceSansPro-Bold;
+  //font-weight: bold;
+  src: url("../vendor/SourceSansPro-Bold.otf") format("opentype");
+}
 // $font-header: 'Oswald', sans-serif;
 // $font-text: 'Lato', sans-serif;
 

@@ -3,3 +3,17 @@
   margin: 0 auto;
   padding: 0;
 }
+
+.main-nav {
+  a {
+    font-size: 30px;
+    line-height: 27px;
+    font-family: SourceSansPro-Semibold;
+    color: $color-second;
+    text-transform: uppercase;
+
+    &:hover{
+      color: $color-light;
+    }
+  }
+}
