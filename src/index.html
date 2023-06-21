@@ -16,24 +16,55 @@
           <h2 class="logo__subtitle">in</h2>
           <h2 class="logo__subtitle">art</h2>
         </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav>
+      <div class="container">
         <div class="main-nav">
           <a href="#home">home</a>
           <a href="#search">search</a>
           <a href="#discover">discover</a>
         </div>
       </div>
+    </nav>
+
+    <div id="pages">
+      <section id="home">
+        <div class="home-wrapper container"></div>
+      </section>
+      <section id="search">
+        <div class="search-wrapper container"></div>
+      </section>
+      <section id="discover">
+        <div class="discover-wrapper container"></div>
+      </section>
     </div>
-  </header>
-
-  <main>
-
   </main>
 
-  <footer>
-
+  <footer class="footer">
+    <div class="container">
+      <p>All rights reserved</p>
+    </div>
   </footer>
-  <script>
 
+  <script id="template-home-widget" type="text/x-handlebars-template">
+    HOME
+    <div class="subscribe">
+      subskrybuj
+    </div>
   </script>
+
+  <script id="template-search-widget" type="text/x-handlebars-template">
+    SEARCH
+  </script>
+
+  <script id="template-discover-widget" type="text/x-handlebars-template">
+    DISCOVER
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="js/app.js" type="module"></script>
 </body>
 </html>
