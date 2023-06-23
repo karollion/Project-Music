@@ -1,10 +1,11 @@
 import {templates, select} from '../settings.js';
 import utils from '../utils.js';
+import Song from './Song.js';
 
 class Search {
-  constructor(element,app){
+  constructor(element,songs){
     const thisSearch = this;
-    thisSearch.app = app;
+    thisSearch.songs = songs;
     thisSearch.render(element);
   }
 
@@ -17,6 +18,15 @@ class Search {
 
     thisSearch.dom = {};
     thisSearch.dom.wrapper = element;
+
+    thisSearch.showSong();
+  }
+
+  showSong(){
+    const thisDiscover = this;
+    //console.log(thisDiscover.songs[1], thisDiscover.dom.wrapper);
+    new Song(thisDiscover.songs[3], thisDiscover.dom.wrapper);
+    //console.log(song);
   }
 }
 export default Search;

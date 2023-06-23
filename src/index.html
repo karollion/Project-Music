@@ -35,15 +35,16 @@
 
     <div id="pages">
       <section id="home">
-        <div class="home-wrapper container"></div>
+        <div class="home-wrapper"></div>
       </section>
       <section id="search">
-        <div class="search-wrapper container"></div>
+        <div class="search-wrapper"></div>
       </section>
       <section id="discover">
-        <div class="discover-wrapper container"></div>
+        <div class="discover-wrapper"></div>
       </section>
     </div>
+
   </main>
 
   <footer class="footer">
@@ -52,25 +53,66 @@
     </div>
   </footer>
 
+  <script id="template-song" type="text/x-handlebars-template">
+    <article class="song"> 
+      <h2 class="song_author_title">{{ author }} - {{ title }}</h2>
+
+      <audio class="song_audio" controls>
+        <source src="songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+      </audio>
+
+      <p class="song_categories">Categories: {{ categories }}</p>
+      <p class="song_ranking"># {{ ranking }} in the ranking</p>
+    </article>
+  </script>
+
+  <script id="template-subscribe-widget" type="text/x-handlebars-template">
+    <div>
+      <div class="subscribe">
+        <div class="">
+          <h2>subscribe</h2>
+          <div class="subscribe_imageartist"></div>
+
+          <p>Dean</p>
+          <p>Henson</p>
+
+          <button type="button" href="/join-now">join now</button>
+
+          <p>new album</p>
+          <p>Available only for subscribers</p>
+
+        </div>
+      </div>
+    </div>
+  </script>
+
   <script id="template-home-widget" type="text/x-handlebars-template">
-    HOME
-    uftf7y
-    <div class="home">iuybuhbhj</div>
-    <p>ggggggg</p>
-    <section class="subscribe">
-      subskrybuj
-    </section>
+    <div>
+      HOME
+      
+    </div>
   </script>
 
   <script id="template-search-widget" type="text/x-handlebars-template">
-    SEARCH
-
+    <div>
+      <h2>search</h2>
+      <div class="searchbar">
+        <label>Name</label>
+        <input type="text" name="search_song_name">
+        <button type="button" class="btn">search</button>
+        <p>We have found {{ number }} songs...</p>
+      </div>
+    </div>
     
   </script>
 
   <script id="template-discover-widget" type="text/x-handlebars-template">
-    DISCOVER
+    <div>
+      <h2>discover</h2>
+      <p>Give it a try!</p>
+    </div>
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>

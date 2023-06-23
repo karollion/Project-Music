@@ -1,4 +1,4 @@
-import {select, classNames} from './settings.js';
+import {select, classNames, settings} from './settings.js';
 import Home from './components/Home.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
@@ -49,36 +49,54 @@ const app = {
       );
     }
   },
+
+  initData: function() {
+    const thisApp = this;
+    thisApp.data = {};
+    const url = settings.db.url + '/' + settings.db.songs;
+    
+    fetch(url)
+      .then(function(rawResponse){
+        return rawResponse.json();
+      })
+      .then(function(parsedResponse){
+        //console.log('parsedResponse', parsedResponse);
+        thisApp.data.songs = parsedResponse;
+        //console.log(thisApp.data.songs);
+        //thisApp.initListSongs();
+        thisApp.initHome();
+        thisApp.initSearch();
+        thisApp.initDiscover();
+      });
+  },
+
+
   initHome: function(){
     const thisApp = this;
 
     const homeHtml = document.querySelector(select.containerOf.home);
-
-    thisApp.homePage = new Home(homeHtml, thisApp);
+    thisApp.homePage = new Home(homeHtml, thisApp.data.songs);
   },
 
   initSearch: function(){
     const thisApp = this;
 
     const searchHtml = document.querySelector(select.containerOf.search);
-
-    thisApp.searchPage = new Search(searchHtml, thisApp);
+    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs);
   },
 
   initDiscover: function(){
     const thisApp = this;
 
     const discoverHtml = document.querySelector(select.containerOf.discover);
-
-    thisApp.discoverPage = new Discover(discoverHtml, thisApp);
+    thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs);
   },
 
   init: function(){
     const thisApp = this;
+    thisApp.initData();
     thisApp.initPages();
-    thisApp.initHome();
-    thisApp.initSearch();
-    thisApp.initDiscover();
+    
   }
 };
 
