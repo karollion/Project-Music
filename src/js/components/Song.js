@@ -15,8 +15,9 @@ class Song {
     const thisSong = this;
     const songHTML = templates.song(thisSong.data);
     thisSong.element = utils.createDOMFromHTML(songHTML);
-    wrapper.appendChild(thisSong.element).innerHTML;
-
+    const wrapperclass = wrapper.getAttribute('class');
+    const container = document.querySelector('.' + wrapperclass + ' .container_songs') ;
+    container.appendChild(thisSong.element).innerHTML;
     thisSong.dom = {};
     thisSong.dom.wrapper = wrapper;
   }

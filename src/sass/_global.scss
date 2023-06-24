@@ -5,7 +5,6 @@
 body {
   margin: 0;
   background: $color-dark;
-  //font-family: $font-text;
   font-size: 14px;
   line-height: 1.7;
   font-weight: $font-normal;
@@ -20,4 +19,13 @@ body {
   > .active {
     display: block;
   }
+}
+
+.container_songs{
+  flex-flow: column wrap;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column wrap;
 }

@@ -23,7 +23,7 @@
   </header>
 
   <main>
-    <nav>
+    <nav class="navigation">
       <div class="container">
         <div class="main-nav">
           <a href="#home">home</a>
@@ -58,7 +58,7 @@
       <h2 class="song_author_title">{{ author }} - {{ title }}</h2>
 
       <audio class="song_audio" controls>
-        <source src="songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+        <source src="songs/{{ filename }}" type="audio/mpeg">
       </audio>
 
       <p class="song_categories">Categories: {{ categories }}</p>
@@ -87,29 +87,34 @@
   </script>
 
   <script id="template-home-widget" type="text/x-handlebars-template">
-    <div>
-      HOME
-      
+    <div class="flex">
+      <div class="container_songs container"></div>
     </div>
   </script>
 
   <script id="template-search-widget" type="text/x-handlebars-template">
-    <div>
-      <h2>search</h2>
-      <div class="searchbar">
-        <label>Name</label>
-        <input type="text" name="search_song_name">
-        <button type="button" class="btn">search</button>
-        <p>We have found {{ number }} songs...</p>
+    <div class="flex">
+      <div class="container">
+        <h2>search</h2>
+        <div class="searchbar">
+          <label>Name</label>
+          <input type="text" name="search_song_name">
+          <button type="button" class="btn">search</button>
+          <p>We have found {{ number }} songs...</p>
+        </div>
       </div>
+    <div class="container_songs container"></div>
     </div>
     
   </script>
 
   <script id="template-discover-widget" type="text/x-handlebars-template">
-    <div>
-      <h2>discover</h2>
-      <p>Give it a try!</p>
+    <div class="flex">
+      <div class="container">
+        <h2>discover</h2>
+        <p>Give it a try!</p>
+      </div>
+      <div class="container_songs container"></div>
     </div>
   </script>
 
