@@ -53,6 +53,18 @@ const app = {
   initData: function() {
     const thisApp = this;
     thisApp.data = {};
+    
+    const urla = settings.db.url + '/' + settings.db.authors;
+    
+    fetch(urla)
+      .then(function(rawResponse){
+        return rawResponse.json();
+      })
+      .then(function(parsedResponse){
+        thisApp.data.authors = parsedResponse;
+        //console.log(thisApp.data.authors);
+      });
+
     const url = settings.db.url + '/' + settings.db.songs;
     
     fetch(url)
@@ -64,6 +76,7 @@ const app = {
         thisApp.data.songs = parsedResponse;
         //console.log(thisApp.data.songs);
         //thisApp.initListSongs();
+        
         thisApp.initHome();
         thisApp.initSearch();
         thisApp.initDiscover();
@@ -75,21 +88,21 @@ const app = {
     const thisApp = this;
 
     const homeHtml = document.querySelector(select.containerOf.home);
-    thisApp.homePage = new Home(homeHtml, thisApp.data.songs);
+    thisApp.homePage = new Home(homeHtml, thisApp.data.songs, thisApp.data.authors);
   },
 
   initSearch: function(){
     const thisApp = this;
 
     const searchHtml = document.querySelector(select.containerOf.search);
-    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs);
+    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs, thisApp.data.authors);
   },
 
   initDiscover: function(){
     const thisApp = this;
 
     const discoverHtml = document.querySelector(select.containerOf.discover);
-    thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs);
+    thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs, thisApp.data.authors);
   },
 
   init: function(){

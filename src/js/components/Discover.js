@@ -3,9 +3,10 @@ import utils from '../utils.js';
 import Song from './Song.js';
 
 class Discover {
-  constructor(element,songs){
+  constructor(element,songs, authors){
     const thisDiscover = this;
     thisDiscover.songs = songs;
+    thisDiscover.authors = authors;
     thisDiscover.render(element);
     thisDiscover.getRandomSong();
   }
@@ -34,7 +35,7 @@ class Discover {
   showSong(id){
     const thisDiscover = this;
 
-    new Song(thisDiscover.songs[id], thisDiscover.dom.wrapper);
+    new Song(thisDiscover.songs[id -1], thisDiscover.dom.wrapper, thisDiscover.authors);
   }
 }
 export default Discover;

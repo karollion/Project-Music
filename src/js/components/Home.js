@@ -4,10 +4,11 @@ import Song from './Song.js';
 import Subscribe from './subscribe.js';
 
 class Home {
-  constructor(element,songs){
+  constructor(element,songs, authors){
     const thisHome = this;
     
     thisHome.songs = songs;
+    thisHome.authors = authors;
     thisHome.render(element);
     thisHome.initListSongs();
     thisHome.initSubscribe();
@@ -29,7 +30,7 @@ class Home {
     
     for(let songData in thisHome.songs){
       //console.log(thisHome.songs[songData]);
-      new Song(thisHome.songs[songData], thisHome.dom.wrapper);
+      new Song(thisHome.songs[songData], thisHome.dom.wrapper, thisHome.authors);
     }
   }
 
