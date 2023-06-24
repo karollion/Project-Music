@@ -1,0 +1,36 @@
+.song{
+  margin: 77px 0 0 0;
+
+  &_audio {
+    width: 560px;
+  }
+
+  &_title {
+    font-size: 30px;
+    line-height: 27px;
+    font-family: SourceSansPro-Semibold;
+    margin: 0 0 65px 22px;
+  }
+
+  &_param {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_categories {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: SourceSansPro-Regular;
+    color: $color-second;
+    margin: 35px 0 0 18px;
+  }
+
+  &_ranking {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: SourceSansPro-Regular;
+    color: $color-second;
+    margin: 35px 18px 0 0;
+    text-align: end;
+  }
+}

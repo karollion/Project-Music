@@ -55,14 +55,15 @@
 
   <script id="template-song" type="text/x-handlebars-template">
     <article class="song"> 
-      <h2 class="song_author_title">{{ author }} - {{ title }}</h2>
+      <h2 class="song_title">{{ author }} - {{ title }}</h2>
 
       <audio class="song_audio" controls>
         <source src="songs/{{ filename }}" type="audio/mpeg">
       </audio>
-
+      <div class="song_param">
       <p class="song_categories">Categories: {{ categories }}</p>
       <p class="song_ranking"># {{ ranking }} in the ranking</p>
+      </div>
     </article>
   </script>
 
