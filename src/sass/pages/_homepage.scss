@@ -13,10 +13,13 @@
   }
 
   &_imageartist {
+    position: absolute;
+    right: 40px;
+    bottom: 25%;
     background: url("../images/artist.jpg") no-repeat center center;
     background-size: cover;
-    width: 300px;
-    height: 400px;
+    width: 465px;
+    height: 578px;
   }
 
   &_title {
@@ -32,6 +35,28 @@
     margin: 0;
   }
 
+  &_artist_name {
+    position: absolute;
+    right: 505px;
+    bottom: 33%;
+    font-size: 100px;
+    font-family: SourceSansPro-Black;
+    letter-spacing: 15px;
+  }
+
+  &_artist_lname {
+    position: absolute;
+    right: 295px;
+    bottom: 21%;
+    font-size: 100px;
+    font-family: SourceSansPro-Black;
+    letter-spacing: 15px;
+
+    span {
+      color: $color-main;
+    }
+  }
+
   &_button {
     position: absolute;
     top: 58%;
@@ -45,6 +70,27 @@
     border-radius: 12px;
     border-color: $color-main;
     color: $color-light;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  &_available {
+    position: absolute;
+    right: 0px;
+    bottom: 6%;
+    font-size: 40px;
+    font-family: SourceSansPro-Semibold;
+    letter-spacing: 7px;
+  }
+
+  &_album {
+    position: absolute;
+    right: 0px;
+    bottom: 12%;
+    font-size: 40px;
+    font-family: SourceSansPro-Bold;
+    color: $color-second;
+    letter-spacing: 7px;
     text-transform: uppercase;
   }
 }
