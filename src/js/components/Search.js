@@ -41,7 +41,7 @@ class Search {
     let counterSongs = 0;
 
     for(let author of thisSearch.authors){
-      console.log(author.name.search(thisSearch.dom.searchInput.value));
+      //console.log(author.name.search(thisSearch.dom.searchInput.value));
       if(author.name.search(thisSearch.dom.searchInput.value) >= 0 
         && 
         thisSearch.dom.searchInput.value != '')

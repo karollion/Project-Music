@@ -9,14 +9,12 @@
 <body>
   <header class="header">
     <div class="header_gradient">
-      <div class="container">
-        <div class="header__wrapper">
-          <div class="logo">
-            <h1 class="logo__title">taste</h1>
-            <h2 class="logo__subtitle">engage</h2>
-            <h2 class="logo__subtitle">in</h2>
-            <h2 class="logo__subtitle">art</h2>
-          </div>
+      <div class="header__wrapper ">
+        <div class="logo">
+          <h1 class="logo__title">taste</h1>
+          <h2 class="logo__subtitle">engage</h2>
+          <h2 class="logo__subtitle">in</h2>
+          <h2 class="logo__subtitle">art</h2>
         </div>
       </div>
     </div>
@@ -26,9 +24,9 @@
     <nav class="navigation">
       <div class="container">
         <div class="main-nav">
-          <a href="#home">home</a>
-          <a href="#search">search</a>
-          <a href="#discover">discover</a>
+          <div class="main_nav_link"><a class="main_nav_a_home" href="#home">home</a></div>
+          <div class="main_nav_link"><a class="main_nav_a_search" href="#search">search</a></div>
+          <div class="main_nav_link"><a class="main_nav_a_discover" href="#discover">discover</a></div>
         </div>
       </div>
     </nav>
@@ -70,18 +68,17 @@
   <script id="template-subscribe-widget" type="text/x-handlebars-template">
     <div>
       <div class="subscribe">
-        <div class="">
-          <h2>subscribe</h2>
+        <h2 class="subscribe_title">subscribe</h2>
+        <div class="container subscribe_container">
           <div class="subscribe_imageartist"></div>
 
-          <p>Dean</p>
-          <p>Henson</p>
+          <p class="subscribe_artist_name">Dean</p>
+          <p class="subscribe_artist_lname">Henson</p>
 
-          <button type="button" href="/join-now">join now</button>
+          <button class="subscribe_button" type="button" href="/join-now">join now</button>
 
-          <p>new album</p>
-          <p>Available only for subscribers</p>
-
+          <p class="subscribe_album">new album</p>
+          <p class="subscribe_available">Available only for subscribers</p>
         </div>
       </div>
     </div>
@@ -96,12 +93,12 @@
   <script id="template-search-widget" type="text/x-handlebars-template">
     <div class="flex">
       <div class="container">
-        <h2>search</h2>
+        <h2 class="page_title">search</h2>
         <div class="searchbar">
-          <label>Name</label>
-          <input type="text" name="search_song_label">
-          <button type="button" class="search_button btn">search</button>
-          <p class="search_counter_songs"></p>
+          <label class="searchbar_label">Name</label>
+          <input class="searchbar_input" type="text" name="search_song_label">
+          <button type="button" class="searchbar_button">search</button>
+          <p class="searchbar_counter_songs"></p>
         </div>
       </div>
     <div class="container_songs container"></div>
@@ -112,8 +109,8 @@
   <script id="template-discover-widget" type="text/x-handlebars-template">
     <div class="flex">
       <div class="container">
-        <h2>discover</h2>
-        <p>Give it a try!</p>
+        <h2 class="page_title">discover</h2>
+        <p class="discover_text">Give it a try!</p>
       </div>
       <div class="container_songs container"></div>
     </div>

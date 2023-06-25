@@ -15,11 +15,35 @@
     font-family: SourceSansPro-Semibold;
     color: $color-second;
     text-transform: uppercase;
-    margin: 0 68px;
-
+    // margin: 0 68px;
+    
     &:hover{
       color: $color-light;
     }
+  }
+
+  .main_nav_link {
+    display: inline-block;
+    //border: 1px red solid;
+    text-align: center;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main_nav_a_home {
+    margin: 0 68px 0 0;
+    text-align: end;
+  }
+
+  .main_nav_a_search{
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main_nav_a_discover {
+    margin: 0 0 0 68px;
+    text-align: end;
   }
 }
 

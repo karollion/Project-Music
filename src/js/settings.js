@@ -16,10 +16,10 @@ export const select = {
     links: '.main-nav a',
   },
   search: {
-    button: '.search_button',
+    button: '.searchbar_button',
     containerSongs: '.container_songs',
     searchInput: '[name="search_song_label"]',
-    counterSongs: '.search_counter_songs',
+    counterSongs: '.searchbar_counter_songs',
   },
 };
 

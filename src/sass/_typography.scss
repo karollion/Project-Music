@@ -1,16 +1,14 @@
-.logo__title {
-  font-family: SourceSansPro-Black;
-  font-size: 200px;
-  letter-spacing: 120px;
-  text-transform: uppercase;
-  margin: 0;
-}
 
-.logo__subtitle {
-  font-family: SourceSansPro-Black;
-  font-size: 36px;
-  line-height: 72px;
+.page_title {
+  margin-top: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 60px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
   letter-spacing: 10px;
+  color: $color-second;
   text-transform: uppercase;
 }
 

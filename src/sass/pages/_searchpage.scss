@@ -1,0 +1,42 @@
+.searchbar {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  color: $color-second;
+  letter-spacing: 5px;
+
+  &_label {
+    font-size: 30px;
+    line-height: 27px;
+    font-family: SourceSansPro-Semibold;
+    color: $color-second;
+    letter-spacing: 5px;
+  }
+
+  &_input {
+    width: 355px;
+    height: 59px;
+    border-radius: 12px;
+    border-color: $color-dark;
+    margin: 0 16px;
+  }
+
+  &_button {
+    width: 139px;
+    height: 59px;
+    margin: 0 16px;
+    background-color: $color-main;
+    font-size: 20px;
+    line-height: 27px;
+    border-radius: 12px;
+    color: $color-light;
+    text-align: center;
+    text-transform: uppercase;
+    border-color: $color-main;
+  }
+
+  &_counter_songs {
+    text-align: center;
+    color: $color-light;
+  }
+}
