@@ -15,6 +15,12 @@ export const select = {
   nav: {
     links: '.main-nav a',
   },
+  search: {
+    button: '.search_button',
+    containerSongs: '.container_songs',
+    searchInput: '[name="search_song_label"]',
+    counterSongs: '.search_counter_songs',
+  },
 };
 
 export  const templates = {

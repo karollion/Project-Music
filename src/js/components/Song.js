@@ -14,15 +14,12 @@ class Song {
   render(wrapper){
     const thisSong = this;
 
-    //thisSong.data.author = thisSong.author;
     let authorOfSong = '';
     for(let author of thisSong.authors){
-
       if(thisSong.data.author === author.id){
         authorOfSong = author.name;
       }
     }
-
     thisSong.data.authorName = authorOfSong;
 
     const songHTML = templates.song(thisSong.data);
