@@ -27,12 +27,15 @@
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: SourceSansPro-Black;
+    font-family: SourceSansPro-Regular;
     font-size: 100px;
     line-height: 100px;
-    letter-spacing: 60px;
-    text-transform: uppercase;
+    letter-spacing: 15px;
     margin: 0;
+
+    span {
+      font-family: SourceSansPro-Black;
+    }
   }
 
   &_artist_name {
@@ -70,7 +73,6 @@
     border-radius: 12px;
     border-color: $color-main;
     color: $color-light;
-    text-transform: uppercase;
     cursor: pointer;
   }
 
@@ -91,6 +93,5 @@
     font-family: SourceSansPro-Bold;
     color: $color-second;
     letter-spacing: 7px;
-    text-transform: uppercase;
   }
 }

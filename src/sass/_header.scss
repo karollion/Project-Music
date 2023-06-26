@@ -27,7 +27,6 @@
     font-family: SourceSansPro-Black;
     font-size: 200px;
     letter-spacing: 120px;
-    text-transform: uppercase;
     margin: 0;
     text-indent: 120px;
   }
@@ -37,7 +36,10 @@
     font-size: 36px;
     line-height: 72px;
     letter-spacing: 10px;
-    text-transform: uppercase;
     margin: 0;
+
+    span {
+      display: block;
+    }
   }
 }

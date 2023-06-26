@@ -21,6 +21,19 @@ export const select = {
     searchInput: '[name="search_song_label"]',
     counterSongs: '.searchbar_counter_songs',
   },
+  uppercase: {
+    headerTitle: '.logo__title',
+    headerSubtitle: '.logo__subtitle',
+    main_nav_a_home: '.main_nav_a_home',
+    main_nav_a_search: '.main_nav_a_search',
+    main_nav_a_discover: '.main_nav_a_discover',
+    searchTitle: '.search_title',
+    searchButton: '.searchbar_button',
+    discoverTitle: '.discover_title',
+    homeSubscribe: '.subscribe_title',
+    homeJoinButton: '.subscribe_button',
+    homeAlbum: '.subscribe_album',
+  }
 };
 
 export  const templates = {

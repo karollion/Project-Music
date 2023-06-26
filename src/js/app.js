@@ -2,6 +2,7 @@ import {select, classNames, settings} from './settings.js';
 import Home from './components/Home.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
+import Uppercase from './components/Uppercase.js';
 
 const app = {
   initPages: function(){
@@ -80,6 +81,7 @@ const app = {
         thisApp.initHome();
         thisApp.initSearch();
         thisApp.initDiscover();
+        thisApp.initUppercase();
       });
   },
 
@@ -105,11 +107,16 @@ const app = {
     thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs, thisApp.data.authors);
   },
 
+  initUppercase: function(){
+    const thisApp = this;
+
+    thisApp.uppercase = new Uppercase();
+  },
+
   init: function(){
     const thisApp = this;
     thisApp.initData();
     thisApp.initPages();
-    
   }
 };
 
