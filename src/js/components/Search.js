@@ -40,25 +40,27 @@ class Search {
     let searchedSongs = [];
     let counterSongs = 0;
 
-    for(let author of thisSearch.authors){
-      //console.log(author.name.search(thisSearch.dom.searchInput.value));
-      if(author.name.search(thisSearch.dom.searchInput.value) >= 0 
+    
+    for(let song of thisSearch.songs){
+      let songAuthor = '';
+      for(let author of thisSearch.authors){
+        if(song.author == author.id){
+          songAuthor = author.name;
+        }
+      }
+
+      if(songAuthor.search(thisSearch.dom.searchInput.value) >= 0 
+        || 
+        song.title.search(thisSearch.dom.searchInput.value) >= 0 
         && 
         thisSearch.dom.searchInput.value != '')
       {
-        //console.log(author.name);
-        for(let song of thisSearch.songs){
-          if(song.author == author.id || song.title.search(thisSearch.dom.searchInput.value) >= 0 
-            && 
-            thisSearch.dom.searchInput.value != '')
-          {
-            searchedSongs.push(song.id);
-            counterSongs += 1;
-            //console.log(searchedSongs);
-          }
-        }
+        searchedSongs.push(song.id);
+        counterSongs += 1;
+        //console.log(searchedSongs);
       }
     }
+
 
     let uniqueSongs = [];
     searchedSongs.forEach((element) => {
