@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TASTE</title>
+  <link rel="stylesheet" type="text/css" href="./vendor/green-audio-player.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -29,6 +30,12 @@
       </div>
     </nav>
 
+    <!-- <div class="player">
+      <audio>
+        <source src="songs/At_The_Top_David_Renda.mp3" type="audio/mpeg">
+      </audio>
+    </div> -->
+
     <div id="pages">
       <section id="home">
         <div class="home-wrapper"></div>
@@ -53,9 +60,12 @@
     <article class="song"> 
       <h2 class="song_title">{{ authorName }} - {{ title }}</h2>
 
-      <audio class="song_audio" controls>
-        <source src="songs/{{ filename }}" type="audio/mpeg">
-      </audio>
+      <div class="player {{ player }}">
+        <audio>
+          <source src="songs/{{ filename }}" type="audio/mpeg">
+        </audio>
+      </div>
+      
       <div class="song_param">
       <p class="song_categories">Categories: {{ categories }}</p>
       <p class="song_ranking"># {{ ranking }} in the ranking</p>
@@ -114,6 +124,7 @@
     </div>
   </script>
 
+  <script src="./vendor/green-audio-player.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/app.js" type="module"></script>
 </body>

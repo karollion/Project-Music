@@ -73,10 +73,7 @@ const app = {
         return rawResponse.json();
       })
       .then(function(parsedResponse){
-        //console.log('parsedResponse', parsedResponse);
         thisApp.data.songs = parsedResponse;
-        //console.log(thisApp.data.songs);
-        //thisApp.initListSongs();
         
         thisApp.initHome();
         thisApp.initSearch();
@@ -113,8 +110,11 @@ const app = {
     thisApp.uppercase = new Uppercase();
   },
 
+  
+
   init: function(){
     const thisApp = this;
+
     thisApp.initData();
     thisApp.initPages();
   }

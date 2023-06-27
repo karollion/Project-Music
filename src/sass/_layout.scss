@@ -45,6 +45,17 @@
   }
 }
 
+.green-audio-player .slider .gap-progress {
+  background-color: $color-main;
+}
+
+.green-audio-player .slider .gap-progress .pin{
+  background-color: $color-main;
+}
+
+.green-audio-player .volume .volume__button.open path {
+  fill: $color-main;
+}
 
 .footer{
   display: flex;

@@ -1,8 +1,11 @@
 .song{
   margin: 77px 0 0 0;
 
-  &_audio {
+  &_player {
     width: 560px;
+    height: 69px;
+    border-radius: 6px;
+    background: $color-light;
   }
 
   &_title {
@@ -33,4 +36,8 @@
     margin: 35px 18px 0 0;
     text-align: end;
   }
+}
+
+.player {
+  width: 560px;
 }

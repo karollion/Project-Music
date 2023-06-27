@@ -78,7 +78,6 @@ class Search {
     uniqueSongs.forEach((element) => {
       thisSearch.showSong(element);
     });
-    //console.log(uniqueSongs);
   }
 
   showSong(id){
