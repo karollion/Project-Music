@@ -2,6 +2,11 @@ import {templates, select} from '../settings.js';
 import utils from '../utils.js';
 import Song from './Song.js';
 
+/** 
+ * Search a song from all songs in the database,
+ * based on a string of characters provided by the user, 
+ * and displaying it on the page.
+ * */
 class Search {
   constructor(element,songs, authors){
     const thisSearch = this;
@@ -35,12 +40,13 @@ class Search {
     });
   }
 
+  /** Find a song if its title or author contains the phrase you are looking for */
   searchTitleSong(){
     const thisSearch = this;
     let searchedSongs = [];
     let counterSongs = 0;
 
-    
+    /** Searching for a given phrase in a song title */
     for(let song of thisSearch.songs){
       let songAuthor = '';
       for(let author of thisSearch.authors){
@@ -49,6 +55,7 @@ class Search {
         }
       }
 
+      /** Searching for a given phrase in the author of the song */
       if(songAuthor.search(thisSearch.dom.searchInput.value) >= 0 
         || 
         song.title.search(thisSearch.dom.searchInput.value) >= 0 
@@ -61,7 +68,7 @@ class Search {
       }
     }
 
-
+    /** Remove repeated songs from the array */
     let uniqueSongs = [];
     searchedSongs.forEach((element) => {
       if (!uniqueSongs.includes(element)) {
@@ -75,11 +82,13 @@ class Search {
       thisSearch.dom.counterSongs.innerHTML = 'We have not found any song';
     }
 
+    /** Show all found songs */
     uniqueSongs.forEach((element) => {
       thisSearch.showSong(element);
     });
   }
 
+  /** Displaying the song with the given 'id' and in the selected place */
   showSong(id){
     const thisSearch = this;
     

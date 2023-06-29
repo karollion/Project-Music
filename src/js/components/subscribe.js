@@ -1,6 +1,9 @@
 import {templates, select} from '../settings.js';
 import utils from '../utils.js';
 
+/**
+ * The class renders the 'subscribe' template on the 'home' page
+ */
 class Subscribe {
   constructor(){
     const thisSub = this;

@@ -1,0 +1,172 @@
+
+/* Adjusting the param of pages to different device resolutions. */
+ 
+@media (max-width: 768px) {
+  .logo{
+    &__title {
+      font-size: 90px;
+      letter-spacing: 30px;
+      text-indent: 30px;
+    }
+
+    &__subtitle {
+      font-size: 24px;
+      line-height: 40px;
+      letter-spacing: 4px;
+    }
+  }
+
+  .container {
+    max-width: 760px;
+  }
+
+  .main-nav {
+    a {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .main_nav_link {
+      width: 100px;
+    }
+
+    .main_nav_a_home {
+      margin: 0 30px 0 0;
+      text-align: end;
+    }
+
+    .main_nav_a_discover {
+      margin: 0 0 0 30px;
+    }
+  }
+
+  .song{
+    margin: 40px 0 0 0;
+
+    &_title {
+      font-size: 18px;
+      line-height: 18px;
+      margin: 0 0 30px 10px;
+    }
+  
+    &_categories {
+      font-size: 14px;
+      line-height: 14px;
+      margin: 15px 0 0 10px;
+    }
+  
+    &_ranking {
+      font-size: 14px;
+      line-height: 14px;
+      margin: 15px 10px 0 0;
+    }
+  }
+  
+  .player {
+    width: 400px;
+    height: 40px;
+  }
+
+  .page_title {
+    font-size: 30px;
+  }
+
+  .subscribe {
+    margin-top: 80px;
+  
+    &_imageartist {
+      right: 20px;
+      top: 15%;
+      width: 270px;
+      height: 350px;
+    }
+  
+    &_title {
+      width: 100%;
+      top: 0%;
+      left: 50%;
+      font-size: 45px;
+      line-height: 28px;
+      letter-spacing: 6px;
+      text-align: center;
+    }
+  
+    &_artist_name {
+      right: 285px;
+      bottom: 58%;
+      font-size: 45px;
+      letter-spacing: 8px;
+    }
+  
+    &_artist_lname {
+      right: 190px;
+      bottom: 51%;
+      font-size: 45px;
+      letter-spacing: 8px;
+    }
+  
+    &_button {
+      top: 65%;
+      left: 15px;
+      width: 250px;
+      height: 100px;
+      font-size: 45px;
+      border-radius: 12px;
+    }
+  
+    &_available {
+      right: 15px;
+      bottom: 6%;
+      font-size: 20px;
+      letter-spacing: 7px;
+      text-align: end;
+    }
+  
+    &_album {
+      right: 15px;
+      bottom: 15%;
+      font-size: 20px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .searchbar{
+    font-size: 18px;
+
+    &_label {
+      font-size: 18px;
+      line-height: 18px;
+      letter-spacing: 3px;
+    }
+  
+    &_input {
+      width: 200px;
+      height: 40px;
+      border-radius: 6px;
+      margin: 0 5px;
+    }
+  
+    &_button {
+      width: 80px;
+      height: 40px;
+      margin: 0 5px;
+      font-size: 18px;
+      line-height: 18px;
+      border-radius: 6px;
+    }
+  }
+
+  .discover_text {
+    margin: 40px 0 0 0;
+  }
+
+  .footer{
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+// @media (min-width: 769px) and (max-width: 950px) {
+
+// }
