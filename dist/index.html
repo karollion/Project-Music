@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASTE</title>
+  <link rel="stylesheet" type="text/css" href="./vendor/green-audio-player.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header_gradient">
+      <div class="header__wrapper ">
+        <div class="logo">
+          <h1 class="logo__title upp">taste</h1>
+          <h2 class="logo__subtitle upp"><span>engage</span><span>in</span><span>art</span></h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav class="navigation">
+      <div class="container">
+        <div class="main-nav">
+          <div class="main_nav_link"><a class="main_nav_a_home" href="#home">home</a></div>
+          <div class="main_nav_link"><a class="main_nav_a_search" href="#search">search</a></div>
+          <div class="main_nav_link"><a class="main_nav_a_discover" href="#discover">discover</a></div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="pages">
+      <section id="home">
+        <div class="home-wrapper"></div>
+      </section>
+      <section id="search">
+        <div class="search-wrapper"></div>
+      </section>
+      <section id="discover">
+        <div class="discover-wrapper"></div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>All rights reserved</p>
+    </div>
+  </footer>
+
+  <script id="template-song" type="text/x-handlebars-template">
+    <article class="song"> 
+      <h2 class="song_title">{{ authorName }} - {{ title }}</h2>
+
+      <div class="player {{ player }}">
+        <audio>
+          <source src="songs/{{ filename }}" type="audio/mpeg">
+        </audio>
+      </div>
+      
+      <div class="song_param">
+      <p class="song_categories">Categories: {{ categories }}</p>
+      <p class="song_ranking"># {{ ranking }} in the ranking</p>
+      </div>
+    </article>
+  </script>
+
+  <script id="template-subscribe-widget" type="text/x-handlebars-template">
+    <div>
+      <div class="subscribe">
+        <h2 class="subscribe_title">subscribe <span>now</span></h2>
+        <div class="container subscribe_container">
+          <div class="subscribe_imageartist"></div>
+
+          <p class="subscribe_artist_name">Dean</p>
+          <p class="subscribe_artist_lname">Hen<span>son</span></p>
+
+          <button class="subscribe_button" type="button" href="/join-now">join now</button>
+
+          <p class="subscribe_album">new album</p>
+          <p class="subscribe_available">Available only for subscribers</p>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script id="template-home-widget" type="text/x-handlebars-template">
+    <div class="flex">
+      <div class="container_songs container"></div>
+    </div>
+  </script>
+
+  <script id="template-search-widget" type="text/x-handlebars-template">
+    <div class="flex">
+      <div class="container">
+        <h2 class="search_title page_title">search</h2>
+        <div class="searchbar">
+          <label class="searchbar_label">Name</label>
+          <input class="searchbar_input" type="text" name="search_song_label">
+          <button type="button" class="searchbar_button">search</button>
+          <p class="searchbar_counter_songs"></p>
+        </div>
+      </div>
+    <div class="container_songs container"></div>
+    </div>
+    
+  </script>
+
+  <script id="template-discover-widget" type="text/x-handlebars-template">
+    <div class="flex">
+      <div class="container">
+        <h2 class=" discover_title page_title">discover</h2>
+        <p class="discover_text">Give it a try!</p>
+      </div>
+      <div class="container_songs container"></div>
+    </div>
+  </script>
+
+  <script src="./vendor/green-audio-player.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,868 @@
+/* Variables */
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url("../vendor//SourceSansPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: SourceSansPro-Black;
+  src: url("../vendor/SourceSansPro-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: SourceSansPro-Semibold;
+  src: url("../vendor/SourceSansPro-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url("../vendor/SourceSansPro-Bold.otf") format("opentype");
+}
+.page_title {
+  margin-top: 65px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 60px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  letter-spacing: 10px;
+  color: #BFBFBF;
+}
+
+a {
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #131313;
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: #fff;
+}
+
+#pages > * {
+  display: none;
+}
+#pages > .active {
+  display: block;
+}
+
+.container_songs {
+  flex-flow: column wrap;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+}
+
+.main-nav a {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  color: #BFBFBF;
+}
+.main-nav a:hover {
+  color: #fff;
+}
+.main-nav .main_nav_link {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  margin: 0;
+  padding: 0;
+}
+.main-nav .main_nav_a_home {
+  margin: 0 68px 0 0;
+  text-align: end;
+}
+.main-nav .main_nav_a_search {
+  margin: 0 auto;
+  text-align: center;
+}
+.main-nav .main_nav_a_discover {
+  margin: 0 0 0 68px;
+  text-align: end;
+}
+
+.green-audio-player .slider .gap-progress {
+  background-color: #CF383E;
+}
+
+.green-audio-player .slider .gap-progress .pin {
+  background-color: #CF383E;
+}
+
+.green-audio-player .volume .volume__button.open path {
+  fill: #CF383E;
+}
+
+.footer {
+  display: flex;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: SourceSansPro-Regular;
+  color: #BFBFBF;
+  letter-spacing: 4px;
+}
+
+.header {
+  background: url("../images/background.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.header .header_gradient {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(19, 19, 19) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 255, 255, 0) 100%);
+  height: 100%;
+}
+
+.header__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.logo {
+  margin: auto;
+  text-align: center;
+}
+.logo__title {
+  font-family: SourceSansPro-Black;
+  font-size: 200px;
+  letter-spacing: 120px;
+  margin: 0;
+  text-indent: 120px;
+}
+.logo__subtitle {
+  font-family: SourceSansPro-Black;
+  font-size: 36px;
+  line-height: 72px;
+  letter-spacing: 10px;
+  margin: 0;
+}
+.logo__subtitle span {
+  display: block;
+}
+
+.song {
+  margin: 77px 0 0 0;
+}
+.song_title {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  margin: 0 0 65px 22px;
+}
+.song_param {
+  display: flex;
+  justify-content: space-between;
+}
+.song_categories {
+  font-size: 20px;
+  line-height: 27px;
+  font-family: SourceSansPro-Regular;
+  color: #BFBFBF;
+  margin: 35px 0 0 18px;
+}
+.song_ranking {
+  font-size: 20px;
+  line-height: 27px;
+  font-family: SourceSansPro-Regular;
+  color: #BFBFBF;
+  margin: 35px 18px 0 0;
+  text-align: end;
+}
+
+.player {
+  width: 560px;
+  height: 70px;
+}
+
+.subscribe {
+  background: url("../images/subscribe.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  margin-top: 150px;
+  position: relative;
+}
+.subscribe_container {
+  position: relative;
+  height: 100%;
+}
+.subscribe_imageartist {
+  position: absolute;
+  right: 40px;
+  bottom: 25%;
+  background: url("../images/artist.jpg") no-repeat center center;
+  background-size: cover;
+  width: 465px;
+  height: 578px;
+}
+.subscribe_title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: SourceSansPro-Regular;
+  font-size: 100px;
+  line-height: 100px;
+  letter-spacing: 15px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.subscribe_title span {
+  font-family: SourceSansPro-Black;
+}
+.subscribe_artist_name {
+  position: absolute;
+  right: 505px;
+  bottom: 33%;
+  font-size: 100px;
+  font-family: SourceSansPro-Black;
+  letter-spacing: 15px;
+}
+.subscribe_artist_lname {
+  position: absolute;
+  right: 295px;
+  bottom: 21%;
+  font-size: 100px;
+  font-family: SourceSansPro-Black;
+  letter-spacing: 15px;
+}
+.subscribe_artist_lname span {
+  color: #CF383E;
+}
+.subscribe_button {
+  position: absolute;
+  top: 58%;
+  left: 0%;
+  transform: translate(0%, -50%);
+  width: 313px;
+  height: 133px;
+  background: #CF383E;
+  font-size: 40px;
+  font-family: SourceSansPro-Bold;
+  border-radius: 12px;
+  border-color: #CF383E;
+  color: #fff;
+  cursor: pointer;
+}
+.subscribe_available {
+  position: absolute;
+  right: 0px;
+  bottom: 6%;
+  font-size: 40px;
+  font-family: SourceSansPro-Semibold;
+  letter-spacing: 7px;
+}
+.subscribe_album {
+  position: absolute;
+  right: 0px;
+  bottom: 12%;
+  font-size: 40px;
+  font-family: SourceSansPro-Bold;
+  color: #BFBFBF;
+  letter-spacing: 7px;
+}
+
+.searchbar {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  color: #BFBFBF;
+  letter-spacing: 5px;
+}
+.searchbar_label {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  color: #BFBFBF;
+  letter-spacing: 5px;
+}
+.searchbar_input {
+  width: 355px;
+  height: 59px;
+  border-radius: 12px;
+  border-color: #131313;
+  margin: 0 16px;
+}
+.searchbar_button {
+  cursor: pointer;
+  width: 139px;
+  height: 59px;
+  margin: 0 16px;
+  background-color: #CF383E;
+  font-size: 20px;
+  line-height: 27px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  border-color: #CF383E;
+}
+.searchbar_counter_songs {
+  text-align: center;
+  color: #fff;
+}
+
+.discover_text {
+  font-size: 30px;
+  line-height: 27px;
+  font-family: SourceSansPro-Semibold;
+  text-align: center;
+  color: #fff;
+  margin: 65px auto 0 auto;
+  letter-spacing: 5px;
+}
+
+/* Adjusting the param of pages to different device resolutions. */
+@media (max-width: 768px) {
+  .logo__title {
+    font-size: 90px;
+    letter-spacing: 30px;
+    text-indent: 30px;
+  }
+  .logo__subtitle {
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 4px;
+  }
+  .container {
+    max-width: 760px;
+  }
+  .main-nav a {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .main-nav .main_nav_link {
+    width: 100px;
+  }
+  .main-nav .main_nav_a_home {
+    margin: 0 30px 0 0;
+    text-align: end;
+  }
+  .main-nav .main_nav_a_discover {
+    margin: 0 0 0 30px;
+  }
+  .song {
+    margin: 40px 0 0 0;
+  }
+  .song_title {
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 0 30px 10px;
+  }
+  .song_categories {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 15px 0 0 10px;
+  }
+  .song_ranking {
+    font-size: 14px;
+    line-height: 14px;
+    margin: 15px 10px 0 0;
+  }
+  .player {
+    width: 400px;
+    height: 40px;
+  }
+  .page_title {
+    font-size: 30px;
+  }
+  .subscribe {
+    margin-top: 80px;
+  }
+  .subscribe_imageartist {
+    right: 20px;
+    top: 15%;
+    width: 270px;
+    height: 350px;
+  }
+  .subscribe_title {
+    top: 0%;
+    left: 50%;
+    font-size: 45px;
+    line-height: 28px;
+    letter-spacing: 6px;
+  }
+  .subscribe_artist_name {
+    right: 285px;
+    bottom: 58%;
+    font-size: 45px;
+    letter-spacing: 8px;
+  }
+  .subscribe_artist_lname {
+    right: 190px;
+    bottom: 51%;
+    font-size: 45px;
+    letter-spacing: 8px;
+  }
+  .subscribe_button {
+    top: 65%;
+    left: 15px;
+    width: 250px;
+    height: 100px;
+    border-radius: 12px;
+  }
+  .subscribe_available {
+    right: 15px;
+    bottom: 6%;
+    font-size: 20px;
+    letter-spacing: 7px;
+    text-align: end;
+  }
+  .subscribe_album {
+    right: 15px;
+    bottom: 15%;
+    font-size: 20px;
+    letter-spacing: 7px;
+  }
+  .searchbar {
+    font-size: 18px;
+  }
+  .searchbar_label {
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 3px;
+  }
+  .searchbar_input {
+    width: 200px;
+    height: 40px;
+    border-radius: 6px;
+    margin: 0 5px;
+  }
+  .searchbar_button {
+    width: 80px;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 6px;
+  }
+  .discover_text {
+    margin: 40px 0 0 0;
+  }
+  .footer {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo__title {
+    font-size: 170px;
+    letter-spacing: 60px;
+    text-indent: 60px;
+  }
+  .logo__subtitle {
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: 8px;
+  }
+  .subscribe {
+    margin-top: 100px;
+  }
+  .subscribe_imageartist {
+    right: 20px;
+    top: 10%;
+    width: 350px;
+    height: 450px;
+  }
+  .subscribe_title {
+    top: 0%;
+    left: 50%;
+    font-size: 60px;
+    line-height: 28px;
+    letter-spacing: 10px;
+  }
+  .subscribe_artist_name {
+    right: 365px;
+    bottom: 47%;
+    font-size: 75px;
+    letter-spacing: 8px;
+  }
+  .subscribe_artist_lname {
+    right: 222px;
+    bottom: 38%;
+    font-size: 75px;
+    letter-spacing: 8px;
+  }
+  .subscribe_button {
+    top: 72%;
+    left: 30px;
+  }
+  .subscribe_available {
+    right: 15px;
+    bottom: 6%;
+    font-size: 30px;
+    letter-spacing: 7px;
+    text-align: end;
+  }
+  .subscribe_album {
+    right: 15px;
+    bottom: 14%;
+    font-size: 30px;
+    letter-spacing: 7px;
+  }
+  .searchbar {
+    font-size: 25px;
+  }
+  .searchbar_label {
+    font-size: 25px;
+    line-height: 18px;
+    letter-spacing: 3px;
+  }
+  .searchbar_input {
+    width: 320px;
+    height: 55px;
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+  .searchbar_button {
+    width: 120px;
+    height: 55px;
+    margin: 0 5px;
+    font-size: 25px;
+    line-height: 18px;
+    border-radius: 10px;
+  }
+  .searchbar .discover_text {
+    margin: 40px 0 0 0;
+  }
+  .searchbar .footer {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zYXNzL192YXJpYWJsZXMuc2NzcyIsInN0eWxlLmNzcyIsIi4uLy4uL3NyYy9zYXNzL190eXBvZ3JhcGh5LnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9fZ2xvYmFsLnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9fbm9ybWFsaXplLnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9fbGF5b3V0LnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9faGVhZGVyLnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9fc29uZy5zY3NzIiwiLi4vLi4vc3JjL3Nhc3MvcGFnZXMvX2hvbWVwYWdlLnNjc3MiLCIuLi8uLi9zcmMvc2Fzcy9wYWdlcy9fc2VhcmNocGFnZS5zY3NzIiwiLi4vLi4vc3JjL3Nhc3MvcGFnZXMvX2Rpc2NvdmVycGFnZS5zY3NzIiwiLi4vLi4vc3JjL3Nhc3MvX21lZGlhLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsY0FBQTtBQVFBO0VBQ0Usa0NBQUE7RUFDQSxtRUFBQTtBQ05GO0FEU0E7RUFDRSxnQ0FBQTtFQUVBLGdFQUFBO0FDUkY7QURXQTtFQUNFLG1DQUFBO0VBQ0EsbUVBQUE7QUNURjtBRFlBO0VBQ0UsK0JBQUE7RUFFQSwrREFBQTtBQ1hGO0FDZkE7RUFDRSxnQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxrQkFBQTtFQUNBLGVBQUE7RUFDQSxpQkFBQTtFQUNBLG1DQUFBO0VBQ0Esb0JBQUE7RUFDQSxjRk5hO0FDdUJmOztBQ2RBO0VBQ0UscUJBQUE7QURpQkY7O0FFL0JBO0VBQ0Usc0JBQUE7QUZrQ0Y7O0FFL0JBO0VBQ0UsU0FBQTtFQUNBLG1CSEpXO0VHS1gsZUFBQTtFQUNBLGdCQUFBO0VBQ0EsZ0JIc0JZO0VHckJaLFdIUFk7QUN5Q2Q7O0FFOUJFO0VBQ0UsYUFBQTtBRmlDSjtBRTlCRTtFQUNFLGNBQUE7QUZnQ0o7O0FFNUJBO0VBQ0Usc0JBQUE7QUYrQkY7O0FFNUJBO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0FGK0JG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 */
