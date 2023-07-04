@@ -75,6 +75,7 @@ const app = {
       .then(function(parsedResponse){
         thisApp.data.songs = parsedResponse;
         
+        thisApp.categoriesOfSongs();
         thisApp.initHome();
         thisApp.initSearch();
         thisApp.initDiscover();
@@ -94,7 +95,7 @@ const app = {
     const thisApp = this;
 
     const searchHtml = document.querySelector(select.containerOf.search);
-    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs, thisApp.data.authors);
+    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories);
   },
 
   initDiscover: function(){
@@ -110,7 +111,21 @@ const app = {
     thisApp.uppercase = new Uppercase();
   },
 
-  
+  categoriesOfSongs: function(){
+    const thisApp = this;
+    let categories = [];
+    for(let song of thisApp.data.songs) {
+      for(let cat of song.categories){
+        categories.push(cat);
+      }
+    }
+    thisApp.uniqueCategories = [];
+    categories.forEach((element) => {
+      if (!thisApp.uniqueCategories.includes(element)) {
+        thisApp.uniqueCategories.push(element);
+      }
+    });
+  },
 
   init: function(){
     const thisApp = this;

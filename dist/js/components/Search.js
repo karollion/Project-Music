@@ -8,17 +8,19 @@ import Song from './Song.js';
  * and displaying it on the page.
  * */
 class Search {
-  constructor(element,songs, authors){
+  constructor(element,songs, authors, categories){
     const thisSearch = this;
     thisSearch.songs = songs;
     thisSearch.authors = authors;
+    thisSearch.categories = categories;
     thisSearch.render(element);
     thisSearch.initActions();
   }
 
   render(element){
     const thisSearch = this;
-    const searchHTML = templates.searchPage();
+    thisSearch.categories.unshift('');
+    const searchHTML = templates.searchPage(thisSearch.categories);
     thisSearch.element = utils.createDOMFromHTML(searchHTML);
     const searchContainer = document.querySelector(select.containerOf.search);
     searchContainer.appendChild(thisSearch.element).innerHTML;
