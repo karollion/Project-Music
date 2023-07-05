@@ -130,6 +130,16 @@
   .searchbar{
     font-size: 18px;
 
+    &_inputs {
+      flex-flow: column wrap;
+    }
+
+    &_input_box {
+      align-items: center;
+      justify-content: flex-end;
+      margin: 10px 0;
+    }
+
     &_label {
       font-size: 18px;
       line-height: 18px;
@@ -146,7 +156,7 @@
     &_button {
       width: 80px;
       height: 40px;
-      margin: 0 5px;
+      margin: 10px auto;
       font-size: 18px;
       line-height: 18px;
       border-radius: 6px;
@@ -242,7 +252,7 @@
     }
   
     &_input {
-      width: 320px;
+      width: 250px;
       height: 55px;
       border-radius: 10px;
       margin: 0 5px;
@@ -251,7 +261,7 @@
     &_button {
       width: 120px;
       height: 55px;
-      margin: 0 5px;
+      margin: 15px auto;
       font-size: 25px;
       line-height: 18px;
       border-radius: 10px;

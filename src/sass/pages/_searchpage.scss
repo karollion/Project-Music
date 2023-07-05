@@ -5,6 +5,18 @@
   color: $color-second;
   letter-spacing: 5px;
 
+  &_inputs {
+    display: flex;
+    width: 100%;
+  }
+
+  &_input_box {
+    display: flex;
+    margin: 10px 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
   &_label {
     font-size: 30px;
     line-height: 27px;

@@ -97,16 +97,19 @@
       <div class="container">
         <h2 class="search_title page_title">search</h2>
         <div class="searchbar">
-          <div>
-            <label class="searchbar_label">Name</label>
-            <input class="searchbar_input" type="text" name="search_song_label">
-            <label class="searchbar_label">Category</label>
-            <select  class="searchbar_input" name="search_song_select">
-              {{#each this}}
-              <option value="{{ this }}">{{ this }}</option>
-              {{/each}}
-              
-            </select>
+          <div class="searchbar_inputs">
+            <div class="searchbar_input_box">
+              <label class="searchbar_label">Name</label>
+              <input class="searchbar_input" type="text" name="search_song_label">
+            </div>
+            <div class="searchbar_input_box">
+              <label class="searchbar_label">Category</label>
+              <select  class="searchbar_input" name="search_song_select">
+                {{#each this}}
+                <option value="{{ this }}">{{ this }}</option>
+                {{/each}}
+              </select>
+            </div>
           </div>
           <div class="flex container">
             <button type="button" class="searchbar_button">search</button>
