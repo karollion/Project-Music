@@ -27,9 +27,10 @@ class Search {
 
     thisSearch.dom = {};
     thisSearch.dom.wrapper = element;
+    thisSearch.dom.searchInput = thisSearch.dom.wrapper.querySelector(select.search.searchInput);
+    thisSearch.dom.searchSelect = thisSearch.dom.wrapper.querySelector(select.search.searchSelect);
     thisSearch.dom.searchButton = thisSearch.dom.wrapper.querySelector(select.search.button);
     thisSearch.dom.containerOfSongs = thisSearch.dom.wrapper.querySelector(select.search.containerSongs);
-    thisSearch.dom.searchInput = thisSearch.dom.wrapper.querySelector(select.search.searchInput);
     thisSearch.dom.counterSongs = thisSearch.dom.wrapper.querySelector(select.search.counterSongs);
   }
 
@@ -38,18 +39,43 @@ class Search {
     thisSearch.dom.searchButton.addEventListener('click', function(event){
       event.preventDefault();
       thisSearch.dom.containerOfSongs.innerHTML = '';
-      thisSearch.searchTitleSong();
+      thisSearch.searchInAllParameters();
     });
   }
 
+  searchInAllParameters(){
+    const thisSearch = this;
+    
+    const searchCategories = thisSearch.searchCategorySong();
+    
+    if(thisSearch.dom.searchSelect.value === ''){
+      thisSearch.searchTitleSong(thisSearch.songs);
+    } else {
+      thisSearch.searchTitleSong(searchCategories);
+    }
+  }
+
+  /** Find a song if its category  you are selected */
+  searchCategorySong(){
+    const thisSearch = this;
+
+    let categorySongs = [];
+    for(let song of thisSearch.songs){
+      if(song.categories.includes(thisSearch.dom.searchSelect.value)){
+        categorySongs.push(song);
+      }
+    }
+    return categorySongs;
+  }
+
   /** Find a song if its title or author contains the phrase you are looking for */
-  searchTitleSong(){
+  searchTitleSong(songsToSearch){
     const thisSearch = this;
     let searchedSongs = [];
     let counterSongs = 0;
 
     /** Searching for a given phrase in a song title */
-    for(let song of thisSearch.songs){
+    for(let song of songsToSearch){
       let songAuthor = '';
       for(let author of thisSearch.authors){
         if(song.author == author.id){

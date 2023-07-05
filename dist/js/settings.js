@@ -19,6 +19,7 @@ export const select = {
     button: '.searchbar_button',
     containerSongs: '.container_songs',
     searchInput: '[name="search_song_label"]',
+    searchSelect: '[name="search_song_select"]',
     counterSongs: '.searchbar_counter_songs',
   },
   uppercase: {

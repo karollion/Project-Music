@@ -101,14 +101,16 @@
             <label class="searchbar_label">Name</label>
             <input class="searchbar_input" type="text" name="search_song_label">
             <label class="searchbar_label">Category</label>
-            <select  class="searchbar_input" name="categories">
+            <select  class="searchbar_input" name="search_song_select">
               {{#each this}}
               <option value="{{ this }}">{{ this }}</option>
               {{/each}}
               
             </select>
           </div>
-          <button type="button" class="searchbar_button">search</button>
+          <div class="flex container">
+            <button type="button" class="searchbar_button">search</button>
+          </div>
           <p class="searchbar_counter_songs"></p>
         </div>
       </div>
