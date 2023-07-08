@@ -14,6 +14,7 @@ class Song {
     thisSong.data = data;
     thisSong.authors = authors;
     thisSong.render(wrapper);
+    //thisSong.initAction();
   }
 
   render(wrapper){
@@ -43,8 +44,27 @@ class Song {
     thisSong.dom = {};
     thisSong.dom.wrapper = wrapper;
     thisSong.dom.player = thisSong.dom.wrapper.querySelector('.player'); 
+    thisSong.dom.audio = thisSong.dom.wrapper.querySelector('audio');
+    
     const playerWrapper = '.' + wrapperclass + ' .' + thisSong.data.player;
     new GreenAudioPlayer(playerWrapper); // eslint-disable-line
+
+  }
+
+  initAction(){
+    const thisSong = this;
+
+    const player = thisSong.dom.wrapper.getElementsByTagName('audio');
+
+    console.log(player);
+    console.log(thisSong.dom.audio);
+    player[0].addEventListener('play', function(){
+      //event.preventDefault();
+      console.log('Klik', thisSong.data.title);
+    });
+
+    //thisSong.dom.audio.addEventListener('play', console.log('pik'));
+
   }
 }
 

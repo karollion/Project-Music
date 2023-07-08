@@ -4,12 +4,13 @@ import Song from './Song.js';
 import Subscribe from './subscribe.js';
 
 class Home {
-  constructor(element,songs, authors, categories){
+  constructor(element,songs, authors, categories, mostListened){
     const thisHome = this;
     
     thisHome.songs = songs;
     thisHome.authors = authors;
     thisHome.categories = categories;
+    thisHome.mostListened = mostListened;
     thisHome.render(element);
     thisHome.initListSongs();
     thisHome.initActions();
@@ -37,6 +38,15 @@ class Home {
       category.addEventListener('click', function(event){
         event.preventDefault();
         thisHome.categoryClickHandler(event);
+      });
+    }
+
+    const audList = thisHome.dom.wrapper.getElementsByTagName('audio');
+
+    for (let i = 0; i < audList.length; i++) {
+      audList[i].addEventListener('play', function(){
+        thisHome.mostListened.push(audList[i]);
+        //console.log(thisHome.mostListened);
       });
     }
   }

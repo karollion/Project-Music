@@ -54,6 +54,7 @@ const app = {
   initData: function() {
     const thisApp = this;
     thisApp.data = {};
+    thisApp.mostListened = [];
     
     const urla = settings.db.url + '/' + settings.db.authors;
     
@@ -88,21 +89,21 @@ const app = {
     const thisApp = this;
 
     const homeHtml = document.querySelector(select.containerOf.home);
-    thisApp.homePage = new Home(homeHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories);
+    thisApp.homePage = new Home(homeHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories, thisApp.mostListened);
   },
 
   initSearch: function(){
     const thisApp = this;
 
     const searchHtml = document.querySelector(select.containerOf.search);
-    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories);
+    thisApp.searchPage = new Search(searchHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories, thisApp.mostListened);
   },
 
   initDiscover: function(){
     const thisApp = this;
 
     const discoverHtml = document.querySelector(select.containerOf.discover);
-    thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs, thisApp.data.authors);
+    thisApp.discoverPage = new Discover(discoverHtml, thisApp.data.songs, thisApp.data.authors, thisApp.mostListened);
   },
 
   initUppercase: function(){

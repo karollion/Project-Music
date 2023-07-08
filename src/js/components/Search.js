@@ -8,11 +8,12 @@ import Song from './Song.js';
  * and displaying it on the page.
  * */
 class Search {
-  constructor(element,songs, authors, categories){
+  constructor(element,songs, authors, categories, mostListened){
     const thisSearch = this;
     thisSearch.songs = songs;
     thisSearch.authors = authors;
     thisSearch.categories = categories;
+    thisSearch.mostListened = mostListened;
     thisSearch.render(element);
     thisSearch.initActions();
   }
@@ -114,6 +115,15 @@ class Search {
     uniqueSongs.forEach((element) => {
       thisSearch.showSong(element);
     });
+
+    const audList = thisSearch.dom.wrapper.getElementsByTagName('audio');
+
+    for (let i = 0; i < audList.length; i++) {
+      audList[i].addEventListener('play', function(){
+        thisSearch.mostListened.push(audList[i]);
+        //console.log(thisSearch.mostListened);
+      });
+    }
   }
 
   /** Displaying the song with the given 'id' and in the selected place */
