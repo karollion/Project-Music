@@ -88,7 +88,7 @@ const app = {
     const thisApp = this;
 
     const homeHtml = document.querySelector(select.containerOf.home);
-    thisApp.homePage = new Home(homeHtml, thisApp.data.songs, thisApp.data.authors);
+    thisApp.homePage = new Home(homeHtml, thisApp.data.songs, thisApp.data.authors, thisApp.uniqueCategories);
   },
 
   initSearch: function(){

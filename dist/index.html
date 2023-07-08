@@ -51,7 +51,7 @@
   </footer>
 
   <script id="template-song" type="text/x-handlebars-template">
-    <article class="song"> 
+    <div class="song"> 
       <h2 class="song_title">{{ authorName }} - {{ title }}</h2>
 
       <div class="player {{ player }}">
@@ -64,7 +64,7 @@
       <p class="song_categories">Categories: {{ categories }}</p>
       <p class="song_ranking"># {{ ranking }} in the ranking</p>
       </div>
-    </article>
+    </div>
   </script>
 
   <script id="template-subscribe-widget" type="text/x-handlebars-template">
@@ -88,7 +88,15 @@
 
   <script id="template-home-widget" type="text/x-handlebars-template">
     <div class="flex">
-      <div class="container_songs container"></div>
+      <div class="categories">
+        <p class="categories_title">Categories:</p>
+        <ul class="categories_list">
+          {{#each this}}
+            <li value="{{ this }}"><a>{{ this }}</a></option>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="home container_songs container"></div>
     </div>
   </script>
 

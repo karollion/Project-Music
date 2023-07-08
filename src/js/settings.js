@@ -15,6 +15,9 @@ export const select = {
   nav: {
     links: '.main-nav a',
   },
+  all: {
+    links: '.categories_list a',
+  },
   search: {
     button: '.searchbar_button',
     containerSongs: '.container_songs',
@@ -51,7 +54,11 @@ export  const classNames = {
   },
   pages: {
     active: 'active',
-  }
+  },
+  categories: {
+    selected: 'selected',
+    hidden: 'hidden',
+  },
 };
 
 export  const settings = {

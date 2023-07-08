@@ -39,11 +39,11 @@ class Search {
     thisSearch.dom.searchButton.addEventListener('click', function(event){
       event.preventDefault();
       thisSearch.dom.containerOfSongs.innerHTML = '';
-      thisSearch.searchInAllParameters();
+      thisSearch.initSearch();
     });
   }
 
-  searchInAllParameters(){
+  initSearch(){
     const thisSearch = this;
     
     const searchCategories = thisSearch.searchCategorySong();
