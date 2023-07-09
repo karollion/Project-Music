@@ -98,14 +98,14 @@ class Discover {
     const thisDiscover = this;
 
     if(thisDiscover.favCategory == null){
-      console.log('Brak faworyta');
+      //console.log('Brak faworyta');
       const max = thisDiscover.songs.length;
       const randomSongId = Math.floor(Math.random() * max) + 1;
       thisDiscover.dom.containerSongs.innerHTML = '';
       thisDiscover.showSong(randomSongId);
     } else {
       let favSongs = [];
-      console.log('Fav: ', thisDiscover.favCategory);
+      //console.log('Fav: ', thisDiscover.favCategory);
       for(let song of thisDiscover.songs) {
         if(song.categories.indexOf(thisDiscover.favCategory) > -1) {
           favSongs.push(song.id);
